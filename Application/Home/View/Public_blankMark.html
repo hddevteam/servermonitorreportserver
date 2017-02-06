@@ -1,0 +1,116 @@
+<style>
+   .mainPage_partOne{
+        margin-top: 15px;
+        padding-left: 8%;
+        width: 2200px;
+        height: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mainPage_partOnePaper{
+        height: 250px;
+        width: 300px;
+        background-color: #FFFFFF;
+        margin-left: 52px;
+        margin-top: 100px;
+        box-shadow:  0 0 7px rgba(0,0,0,.14),0 7px 15px rgba(0,0,0,.23);
+        float: left;
+        white-space: nowrap;
+    }
+    .mainPage_type{
+        margin-top: 15px;
+        margin-left: 15px;
+        float: left;
+        font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        color: #0A3A72;
+    }
+    .mainPage_change{
+        margin-top: 15px;
+        margin-right: 15px;
+        float: right;
+        font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+        font-size: 25px;
+        color: black;
+    }
+    .mainPage_number{
+        margin-top: 80px;
+        text-align: center;
+        font-size: 70px;
+    }
+    .mainPage_button{
+        height: 30px;
+        width: 270px;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 15px;
+        padding-top: 8px;
+        font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        color: white;
+        /*background-color: #28A2D6;*/
+        background-color: #16aad8;
+        border-radius: 3px;
+    }
+    .mainPage_nav:link{
+        text-decoration:none;
+    }
+</style>
+<script>
+    $('#queryDays').change(function(){
+
+        // alert($(this).children('option:selected').val());
+        var days=$(this).children('option:selected').val();
+        if(parseInt( days)==1)
+            $_url=  "/servermonitorforweb/index.php/home/index/getdataforbarchart?queryDays=1";
+        else
+        if(parseInt( days)==7)
+            $_url=  "/servermonitorforweb/index.php/home/index/getdataforbarchart?queryDays=7";
+        else
+            $_url=  "/servermonitorforweb/index.php/home/index/getdataforbarchart?queryDays=30";
+
+      /*  $.ajax({
+            type: "post",
+            url:$_url,
+            data: {
+                $queryDays:7
+            },
+            success: function (data) {
+                for(var  i=0;i<data.length;i++)
+                {
+                    barData[i] = {label:data[i].sitename , y:parseInt( data[i].times),indexLabel:data[i].times};
+                }
+            },
+        });*/
+    });
+</script>
+<div class="mainPage_partOne">
+
+   <!-- 设备信息-->
+    <div class="mainPage_partOnePaper">
+        <div class="mainPage_type">Devices</div>
+        <div class="mainPage_change">+1</div>
+        <div class="mainPage_number"> {$devicesNum}</div>
+        <!--<a href="" class="mainPage_nav" >
+            <div class="mainPage_button">Devices List</div>
+        </a>-->
+        <div class="mainPage_button">Devices </div>
+    </div>
+
+    <!-- 服务器信息-->
+    <div class="mainPage_partOnePaper">
+        <div class="mainPage_type">Servers</div>
+        <div class="mainPage_change">+3</div>
+        <div class="mainPage_number">{$servers}</div>
+        <div class="mainPage_button">Servers</div>
+
+    </div>
+
+    <!-- 服务器时间信息-->
+    <div class="mainPage_partOnePaper">
+        <div class="mainPage_type">Events</div>
+        <div class="mainPage_change">+203</div>
+        <div class="mainPage_number">{$events}</div>
+        <div class="mainPage_button">Events </div>
+    </div>
+</div>

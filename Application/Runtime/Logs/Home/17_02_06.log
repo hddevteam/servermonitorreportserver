@@ -1,0 +1,71 @@
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001622s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.1030s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.0049s ]
+SQL: SELECT  sitename,siteAddress,ip,statusCode, errorTime,case  WHEN requestTime>1000 THEN CONCAT( truncate(requestTime/1000,0) ,' min')  WHEN requestTime<=1000 THEN CONCAT(  requestTime , ' s') ELSE requestTime END as requestTime,errorDetails  from server_site  order by errortime desc LIMIT 400 [ RunTime:0.0253s ]
+SQL: SELECT COUNT(DISTINCT ip) AS tp_count FROM `server_site` LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(DISTINCT siteName) AS tp_count FROM `server_site` LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `server_site` LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001420s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001520s ]
+NOTIC: [8] Undefined variable: page F:\xampp\install\htdocs\ServerMonitorReportServer\Application\Runtime\Cache\Home\0d6509e863112dc5821b22ecb897e16e.php 第 842 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.097592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002874s ]
+
+[ 2017-02-06T09:22:17+08:00 ] ::1 /servermonitorreportserver/index.php/home/index/getDataForLineChart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.0375s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.1284s ]
+SQL: SELECT left(ltrim(rtrim(errorTime)),16) as errorTime ,COUNT(left(errorTime,16)) as times    from server_site  where   DATE_FORMAT(errorTime,'%m-%d-%Y')  = DATE_FORMAT(NOW(),'%m-%d-%Y') GROUP BY left(ltrim(rtrim(errorTime)),16) ORDER BY left(ltrim(rtrim(errorTime)),16) ASC [ RunTime:0.0043s ]
+
+[ 2017-02-06T09:22:17+08:00 ] ::1 /servermonitorreportserver/index.php/home/index/getDataForLineChart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.0032s ]
+SQL: SELECT left(ltrim(rtrim(errorTime)),16) as errorTime ,COUNT(left(errorTime,16)) as times    from server_site  where  WEEK(errorTime,1) = WEEK(NOW(),1) and EXTRACT(YEAR from errorTime) =EXTRACT(YEAR FROM NOW() ) GROUP BY left(ltrim(rtrim(errorTime)),16) ORDER BY left(ltrim(rtrim(errorTime)),16) ASC limit 200 [ RunTime:0.0018s ]
+
+[ 2017-02-06T09:22:17+08:00 ] ::1 /servermonitorreportserver/index.php/home/index/getDataForLineChart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.0022s ]
+SQL: SELECT left(ltrim(rtrim(errorTime)),16) as errorTime ,COUNT(left(errorTime,16)) as times    from server_site  where  EXTRACT(MONTH from errorTime) =EXTRACT(Month FROM NOW() )  and EXTRACT(YEAR from errorTime) =EXTRACT(YEAR FROM NOW() ) GROUP BY left(ltrim(rtrim(errorTime)),16) ORDER BY left(ltrim(rtrim(errorTime)),16) ASC [ RunTime:0.0015s ]
+
+[ 2017-02-06T09:22:17+08:00 ] ::1 /servermonitorreportserver/index.php/home/index/getDataForBarChart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `server_site` [ RunTime:0.0024s ]
+SQL: SELECT lower(siteName) as siteName,errorTime ,COUNT(lower(siteName)) as times  from 	server_site where EXTRACT(DAY from errorTime) =EXTRACT(DAY FROM NOW() ) 		and EXTRACT(YEAR from errorTime) =EXTRACT(YEAR FROM NOW() )  GROUP BY lower(siteName)  [ RunTime:0.0017s ]
+

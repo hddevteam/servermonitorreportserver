@@ -1,0 +1,72 @@
+<section class="content" style="width: 80%;/*min-height: auto;*/">
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-md-12">
+            <div class="box box-danger">
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <div class="table-responsive" style="overflow-x: visible;">
+
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                            <tr>
+                                <th>site name</th>
+                                <th>site address</th>
+                                <th>client ip</th>
+                                <th>status code</th>
+                                <th>error time</th>
+                                <th>request time</th>
+                                <th>error details</th>
+                            </tr>
+                            <volist name="siteList" id="site">
+                                <tr>
+                                    <td>
+                                        {$site.sitename}
+                                    </td>
+                                    <td>
+                                        <a href={$site.siteaddress} target="_blank">{$site.siteaddress}</a>
+                                    </td>
+                                    <td>
+                                        {$site.ip}
+                                    </td>
+                                    <td>
+                                        {$site.statuscode}
+                                    </td>
+                                    <td>
+                                        {$site.errortime}
+                                    </td>
+                                    <td>
+                                        {$site.requesttime}
+                                        <!--<if condition="$site.requesttime elt 1000">{$site.requesttime}</if>-->
+
+                                    </td>
+                                    <td>
+                                        {$site.errordetails}
+                                    </td>
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+                        <div class="box-footer no-padding">
+                            <div class="mailbox-controls">
+                                <div class="btn-group" style="height: 45px">
+
+                                </div>
+                                <div class="pull-right">
+                                    {$page}
+                                    <!-- /.btn-group -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /.mail-box-messages -->
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+</section>
+</body>
+</html>

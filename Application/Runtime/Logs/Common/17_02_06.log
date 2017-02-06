@@ -1,0 +1,92 @@
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/dist/js/html5shiv.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/nprogress/nprogress.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/dist/respond.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+ERR: 无法加载模块:Public
+
+blic
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Home/dist/css/lrtk.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/nprogress/nprogress.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/bundle.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+ERR: 无法加载模块:Bundle
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Application/Home/View/libs/d3pie.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/dist/respond.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/toastr/toastr.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/UEditor/lang/zh-cn/zh-cn.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/nprogress/nprogress.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Application/Home/View/libs/d3pie.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Home/dist/css/lrtk.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/Public/Admin/nprogress/nprogress.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+ERR: 无法加载模块:Public
+
+[ 2017-02-06T09:22:13+08:00 ] ::1 /servermonitorreportserver/bundle.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+ERR: 无法加载模块:Bundle
+

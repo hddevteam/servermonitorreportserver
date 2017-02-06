@@ -1,0 +1,25 @@
+{
+  "name": "ServerMonitorReportServer",
+  "version": "1.0.0",
+  "description": "本项目与我方开发的APP--server monitor配套使用，是server monitor的一个强力助手。通过本项目对服务器数据进行量化处理，可以帮助您更轻松、更详细地了解服务器的运行状况，对服务器运行状态一目了然。",
+  "main": "bootstrap.min.js",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "material-ui": "^0.16.7",
+    "webpack": "^1.14.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.henu.edu.cn/WebApp/ServerMonitorForWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
